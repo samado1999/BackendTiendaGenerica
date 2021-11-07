@@ -7,79 +7,86 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Producto {
 
     @Id
+    private String id;
     private String productCode;
-    private Double iva;
-    private String supplierNit;
     private String productName;
-    private Double buyPrice;
-    private Double sellPrice;
+    private String supplierNit;
+    private String buyPrice;
+    private String iva;
+    private String sellPrice;
 
     public Producto() {
     }
 
-    public Producto(String productCode, Double iva, String supplierNit, String productName, Double buyPrice,
-            Double sellPrice) {
+    public Producto(String productCode,String productName,String supplierNit,String buyPrice,String iva,String sellPrice) {
         this.productCode = productCode;
-        this.iva = iva;
-        this.supplierNit = supplierNit;
         this.productName = productName;
+        this.supplierNit = supplierNit;
         this.buyPrice = buyPrice;
+        this.iva = iva;
         this.sellPrice = sellPrice;
     }
 
-    public String getProductCode() {
-        return productCode;
-    }
+    public String getId() {
+		return id;
+	}
 
-    public void setProductCode(String productCode) {
-        this.productCode = productCode;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public Double getIva() {
-        return iva;
-    }
+	public String getProductCode() {
+		return productCode;
+	}
 
-    public void setIva(Double iva) {
-        this.iva = iva;
-    }
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
+	}
 
-    public String getsupplierNit() {
-        return supplierNit;
-    }
+	public String getProductName() {
+		return productName;
+	}
 
-    public void setsupplierNit(String supplierNit) {
-        this.supplierNit = supplierNit;
-    }
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
 
-    public String getProductName() {
-        return productName;
-    }
+	public String getSupplierNit() {
+		return supplierNit;
+	}
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
+	public void setSupplierNit(String supplierNit) {
+		this.supplierNit = supplierNit;
+	}
 
-    public Double getBuyPrice() {
-        return buyPrice;
-    }
+	public String getBuyPrice() {
+		return buyPrice;
+	}
 
-    public void setBuyPrice(Double buyPrice) {
-        this.buyPrice = buyPrice;
-    }
+	public void setBuyPrice(String buyPrice) {
+		this.buyPrice = buyPrice;
+	}
 
-    public Double getSellPrice() {
-        return sellPrice;
-    }
+	public String getIva() {
+		return iva;
+	}
 
-    public void setSellPrice(Double sellPrice) {
-        this.sellPrice = sellPrice;
-    }
+	public void setIva(String iva) {
+		this.iva = iva;
+	}
 
-    @Override
-    public String toString() {
-        return "Producto{" + "productCode='" + productCode + '\'' + ", iva='" + iva + '\'' + ", supplierNit='"
-                + supplierNit + '\'' + ", productName='" + productName + '\'' + ", buyPrice='" + buyPrice + '\''
-                + ", sellPrice='" + sellPrice + '\'' + '}';
-    }
+	public String getSellPrice() {
+		return sellPrice;
+	}
 
+	public void setSellPrice(String sellPrice) {
+		this.sellPrice = sellPrice;
+	}
+
+	@Override
+	public String toString() {
+		return "Producto [id=" + id + ", productCode=" + productCode + ", productName=" + productName + ", supplierNit="
+				+ supplierNit + ", buyPrice=" + buyPrice + ", iva=" + iva + ", sellPrice=" + sellPrice + "]";
+	}
+	
 }
