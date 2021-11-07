@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import co.edu.unbosque.lagenericiclo4.model.*;
 import co.edu.unbosque.lagenericiclo4.repository.*;
 
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 public class UserController {
