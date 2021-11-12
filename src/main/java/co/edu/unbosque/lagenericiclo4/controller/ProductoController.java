@@ -29,12 +29,27 @@ public class ProductoController {
 	@Autowired
 	ProductoRepository productoRepository;
 
-	@PostMapping("/productos")
+	// metodo para eliminar todos los productos
+	@DeleteMapping("/productos/deleteAll")
+	public ResponseEntity<?> deleteAllProductos() {
+		productoRepository.deleteAll();
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+
+	@PostMapping("/productos/saveAll")
+	public ResponseEntity<String> guardar(@RequestBody List<Producto> productos) {
+		try {
+			productoRepository.saveAll(productos);
+			return new ResponseEntity<String>("Productos guardados", HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<String>("Error al guardar productos", HttpStatus.BAD_REQUEST);
+		}
+	}
+
+	@PostMapping("/productos/save")
 	public ResponseEntity<Producto> createProducto(@RequestBody Producto producto) {
 		try {
-			Producto _producto = productoRepository
-					.save(new Producto(producto.getProductCode(), producto.getProductName(), producto.getSupplierNit(),
-							producto.getBuyPrice(), producto.getIva(), producto.getSellPrice()));
+			Producto _producto = productoRepository.save(producto);
 			return new ResponseEntity<>(_producto, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
