@@ -12,6 +12,7 @@ public class Venta {
     private double sellIva;
     private double sellTotal;
     private double sellSubtotal;
+    private String userId;
 
     public Venta() {
         this.clientId = "";
@@ -80,10 +81,17 @@ public class Venta {
         this.sellSubtotal = sellSubtotal;
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
     @Override
     public String toString() {
         return "Venta [clientId=" + clientId + ", sellId=" + sellId + ", sellsDetail=" + sellsDetail + ", sellIva="
-                + sellIva + ", sellTotal=" + sellTotal + ", sellSubtotal=" + sellSubtotal + "]";
+                + sellIva + ", sellTotal=" + sellTotal + ", sellSubtotal=" + sellSubtotal + ", userId=" + userId + "]";
     }
-
 }
