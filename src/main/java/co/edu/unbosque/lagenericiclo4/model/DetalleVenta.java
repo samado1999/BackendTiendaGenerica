@@ -78,7 +78,8 @@ public class DetalleVenta {
 
     @Override
     public String toString() {
-        return "DetalleVenta{" + "productQuantity=" + productQuantity + ", productCode='" + productCode + '\''
-                + ", totalSale=" + totalSale + ", totalCost=" + totalCost + ", totalIva=" + totalIva + '}';
+        return "DetalleVenta [productQuantity=" + productQuantity + ", sellId=" + sellId + ", productCode="
+                + productCode + ", totalSale=" + totalSale + ", totalCost=" + totalCost + ", totalIva=" + totalIva
+                + "]";
     }
 }
