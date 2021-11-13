@@ -23,7 +23,7 @@ import co.edu.unbosque.lagenericiclo4.repository.*;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/usuario")
 public class UserController {
 
 	@Autowired

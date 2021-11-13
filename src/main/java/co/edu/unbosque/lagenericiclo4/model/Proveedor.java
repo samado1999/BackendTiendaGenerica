@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Proveedor {
 
     @Id
+    private String id;
     private String supplierNit;
     private String supplierCity;
     private String supplierAddress;
@@ -14,15 +15,9 @@ public class Proveedor {
     private String supplierPhone;
 
     public Proveedor() {
-        this.supplierNit = "";
-        this.supplierCity = "";
-        this.supplierAddress = "";
-        this.supplierName = "";
-        this.supplierPhone = "";
     }
 
-    public Proveedor(String supplierNit, String supplierCity, String supplierAddress, String supplierName,
-            String supplierPhone) {
+    public Proveedor(String supplierNit, String supplierCity, String supplierAddress, String supplierName,String supplierPhone) {
         this.supplierNit = supplierNit;
         this.supplierCity = supplierCity;
         this.supplierAddress = supplierAddress;

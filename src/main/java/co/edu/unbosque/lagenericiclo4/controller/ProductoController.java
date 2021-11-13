@@ -23,13 +23,12 @@ import co.edu.unbosque.lagenericiclo4.repository.*;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/producto")
 public class ProductoController {
 
 	@Autowired
 	ProductoRepository productoRepository;
 
-	// metodo para eliminar todos los productos
 	@DeleteMapping("/productos/deleteAll")
 	public ResponseEntity<?> deleteAllProductos() {
 		productoRepository.deleteAll();

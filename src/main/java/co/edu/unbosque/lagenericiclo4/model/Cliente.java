@@ -7,72 +7,67 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Cliente {
 
     @Id
-    private String clientId;
-    private String clientAddress;
-    private String clientEmail;
-    private String clientName;
-    private String clientPhone;
+    private String id;
+    private String cedula;
+    private String direccion;
+    private String correo;
+    private String nombre;
+    private String telefono;
 
     public Cliente() {
-        this.clientId = "";
-        this.clientAddress = "";
-        this.clientEmail = "";
-        this.clientName = "";
-        this.clientPhone = "";
     }
 
-    public Cliente(String clientId, String clientAddress, String clientEmail, String clientName, String clientPhone) {
-        this.clientId = clientId;
-        this.clientAddress = clientAddress;
-        this.clientEmail = clientEmail;
-        this.clientName = clientName;
-        this.clientPhone = clientPhone;
-    }
+    public Cliente(String cedula, String direccion, String correo, String nombre, String telefono) {
+		this.cedula = cedula;
+		this.direccion = direccion;
+		this.correo = correo;
+		this.nombre = nombre;
+		this.telefono = telefono;
+	}
 
-    public String getClientId() {
-        return clientId;
-    }
+    public String getCedula() {
+		return cedula;
+	}
 
-    public void setClientId(String clientId) {
-        this.clientId = clientId;
-    }
+	public void setCedula(String cedula) {
+		this.cedula = cedula;
+	}
 
-    public String getClientAddress() {
-        return clientAddress;
-    }
+	public String getDireccion() {
+		return direccion;
+	}
 
-    public void setClientAddress(String clientAddress) {
-        this.clientAddress = clientAddress;
-    }
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
 
-    public String getClientEmail() {
-        return clientEmail;
-    }
+	public String getCorreo() {
+		return correo;
+	}
 
-    public void setClientEmail(String clientEmail) {
-        this.clientEmail = clientEmail;
-    }
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
 
-    public String getClientName() {
-        return clientName;
-    }
+	public String getNombre() {
+		return nombre;
+	}
 
-    public void setClientName(String clientName) {
-        this.clientName = clientName;
-    }
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-    public String getClientPhone() {
-        return clientPhone;
-    }
+	public String getTelefono() {
+		return telefono;
+	}
 
-    public void setClientPhone(String clientPhone) {
-        this.clientPhone = clientPhone;
-    }
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
 
-    @Override
-    public String toString() {
-        return "Cliente{" + "clientId='" + clientId + '\'' + ", clientAddress='" + clientAddress + '\''
-                + ", clientEmail='" + clientEmail + '\'' + ", clientName='" + clientName + '\'' + ", clientPhone='"
-                + clientPhone + '\'' + '}';
-    }
+	@Override
+	public String toString() {
+		return "Cliente [cedula=" + cedula + ", direccion=" + direccion + ", correo=" + correo + ", nombre=" + nombre
+				+ ", telefono=" + telefono + "]";
+	}
 }
